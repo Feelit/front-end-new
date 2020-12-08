@@ -5,6 +5,7 @@ import {
   Route
 } from "react-router-dom";
 import { MenuComponent } from "../components/MenuComponent";
+import { DetailScreen } from "../screens/DetailScreen";
 import { HomeScreen } from "../screens/HomeScreen";
 import { LoginScreen } from "../screens/LoginScreen";
 import { NewPostScreen } from "../screens/NewPostScreen";
@@ -28,6 +29,9 @@ export default function AppRouter() {
           </Route>
           <Route path="/new-post">
             <NewPostScreen />
+          </Route>
+          <Route path="/post">
+            <DetailScreen />
           </Route>
           <Route path="/">
             <HomeScreen />

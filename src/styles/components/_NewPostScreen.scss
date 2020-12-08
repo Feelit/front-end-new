@@ -1,0 +1,107 @@
+.new-post__container {
+  background-color: white;
+  border-radius: 28px;
+  box-shadow: $box-shadow;
+  display: flex;
+  height: 444px;
+  margin: 0 auto;
+  width: 880px;
+
+  .new-post__container--left {
+    align-items: center;
+    background-image: url('../../assets/bg-upload.jpg');
+    border-radius: 28px 0 0 28px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      position: absolute;
+      top: 120px;
+    }
+
+    .new-post__btn-plus {
+      background-color: rgb(255, 255, 255);
+      border-radius: 50%;
+      box-shadow: $box-shadow;
+      cursor: pointer;
+      height: 100px;
+      opacity: 1;
+      padding: 20px;
+      position: absolute;
+      width: 100px;
+
+      img {
+        opacity: .5;
+        width: 100%;
+      }
+    }
+    .new-post__input-file {
+      display: none;
+    }
+  }
+
+  .new-post__container--right {
+    padding: 36px;
+    width: 50%;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      label {
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        padding-top: 16px;
+        padding-left: 16px;
+      }
+      .new-post__input {
+        border: none;
+        border-radius: 20px;
+        background-color: #F8FAFF;
+        padding: 12px 18px;
+        box-shadow: inset 0px 4px 5px 0 rgba(0, 0, 0, 0.2);
+        outline: none;
+      }
+      .new-post__textarea {
+        border: none;
+        border-radius: 20px;
+        background-color: #F8FAFF;
+        box-shadow: inset 0px 4px 5px 0 rgba(0, 0, 0, 0.2);
+        height: 180px;
+        padding: 12px 18px;
+        outline: none;
+      }
+    }
+  }
+  .new-post__btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    :first-child {
+      background-color: #788190;
+      &:hover {
+        background-color: darken($color: #788190, $amount: 5);
+      }
+    }
+    button {
+      background-color: #0D2450;
+      border: none;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      font-weight: 600;
+      padding: 12px 24px;
+      width: 150px;
+      transition: .5s;
+      outline: none;
+      &:hover {
+        background-color: darken($color: #0D2450, $amount: 5);
+      }
+    }
+  }
+
+}
