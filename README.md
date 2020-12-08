@@ -54,5 +54,5 @@ MIT License
 
 ## Thank you!! 🎁
 
-* Agradecer a nuestra Coach Yuliana por el apoyo constante 🤓
+* Agradecer a nuestra Coach ------ por el apoyo constante 🤓
 * Agradecer a todo el equipo de Platzi Master por sus consejos y sabiduría compartida 🤓
