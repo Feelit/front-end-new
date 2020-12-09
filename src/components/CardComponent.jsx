@@ -6,9 +6,9 @@ import plusIcon from '../assets/plus-icon.svg'
 export const CardComponent = () => {
   return (
     <div className = "card__container">
-      <figure>
+      
         <img src={cardImage} alt=""/>
-      </figure>
+      
       <form action="">
         <input type="range"/>
         <h2 className = "card__description">Every day is a travel...</h2>
