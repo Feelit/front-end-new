@@ -10,7 +10,7 @@ export const CardComponent = () => {
         <img src={cardImage} alt=""/>
       
       <form action="">
-        <input type="range"/>
+        <input type="range" className = "card__range"/>
         <h2 className = "card__description">Every day is a travel...</h2>
         <span className = "card__input-text">
           <input type="text" className = "card__input-text-text" placeholder = "Let a comment to Ana" />
