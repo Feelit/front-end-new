@@ -1,8 +1,15 @@
-//const baseUrl = 'https://cridetest.ml';
+const baseUrl = 'https://cridetest.ml';
 
 const getAllPosts = async () => {
-  const url = 'https://cridetest.ml/posts/';
-  const resp = await fetch(url);
+  const url = `${baseUrl}/posts/`;
+  const resp = await fetch(url
+  //   , {
+  //   'mode': 'cors',
+  //   'headers': {
+  //       'Access-Control-Allow-Origin': '*',
+  //   }
+  // }
+  );
   const posts = await resp.json();
   return posts;
 };
