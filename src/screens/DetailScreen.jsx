@@ -8,7 +8,7 @@ export const DetailScreen = () => {
     <div>
       <div className="detail-screen__container">
         <div>
-          <img src={detailScreenImage} alt="" />
+          <img src={detailScreenImage} alt="detail" />
         </div>
         <div>
           <form action="">
@@ -16,7 +16,7 @@ export const DetailScreen = () => {
 
             <div className="detail-screen__user">
               <div >
-                <img src={user} className="detail-screen__avatar" ></img>
+                <img src={user} className="detail-screen__avatar" alt="profile" ></img>
               </div>
               <div>
                 <h2 className="detail-screen__user-name">George Smith</h2>
@@ -28,7 +28,7 @@ export const DetailScreen = () => {
             <div className="detail-screen__opinion-container">
               <div className="detail-screen__opinion">
                 <div >
-                  <img src={user} className="detail-screen__avatar" ></img>
+                  <img src={user} className="detail-screen__avatar" alt="user" ></img>
                 </div>
                 <div>
                   <h2 className="detail-screen__user-name">George Smith</h2>
