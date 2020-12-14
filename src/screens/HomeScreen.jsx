@@ -15,13 +15,14 @@ export const HomeScreen = () => {
   }, [dispatch])
 
   return loading ? 'loading' : (
-    <div className='home__posts--container'>
-      {
-        allPosts.map((post)=>{
-          return <CardComponent key={post.id} />
-
-        })
-      }
+    <div className="cont">
+      <div className='home__posts--container'>
+        {
+          allPosts.map((post)=>{
+            return <CardComponent key={post.id} {...post} />
+          })
+        }
+      </div>
     </div>
   )
 }

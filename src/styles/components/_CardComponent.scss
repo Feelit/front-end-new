@@ -1,10 +1,17 @@
 .card__container {
 	border-radius: 20px;
+	width: 100%;
 	max-width: 245px;
 	height: auto;
 	overflow: hidden;
 	box-shadow: -4px -4px 4px #F9FAFF, 4px 4px 10px #E9EDF7;
 	margin: 0 25px 25px 0;
+	break-inside: avoid;
+	page-break-inside: avoid;
+
+	img {
+		width: 100%;
+	}
 }
 
 .card__description {
