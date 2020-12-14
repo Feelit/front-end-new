@@ -6,6 +6,7 @@
     border-radius: 40px;
     overflow: hidden;
     margin-bottom: 59px;
+    background-color: white;
 }
 
 .detail-screen__range { 
@@ -38,13 +39,13 @@
 .detail-screen__user {
     display: flex;
     padding: 25px;
-    margin: 0 25px 0 25px;   
+    margin: 0 25px 0 25px;
     align-items: center;
 }
 
 .detail-screen__opinion {
     display: flex;
-    padding: 25px;       
+    padding: 25px;
     align-items: center;
 }
 
@@ -60,8 +61,8 @@
 
 
 .detail-screen__input-text {
-    padding: 23px;  
-    width: 100%;   
+    padding: 23px;
+    width: 100%;
     position: relative;
     margin-left: 25px;
 }
