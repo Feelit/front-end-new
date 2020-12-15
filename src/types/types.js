@@ -1,5 +1,8 @@
 export const types = {
-  postsLoaded: '[Posts] Clients loaded',
+  postsLoaded: '[Posts] Posts loaded',
+  postSelected: '[Posts] Post by id loaded',
+
+  addComment: '[Comment] New comment',
 
   userSaved: '[User] User name added',
   authLogin: '[User] Login',

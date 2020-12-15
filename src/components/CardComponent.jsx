@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import plusIcon from '../assets/plus-icon.svg';
 import imgDefault from '../assets/image-not-found.png';
 
-export const CardComponent = ({title, photo, user}) => {
+
+export const CardComponent = ({title, photo, user, id}) => {
+
   return (
-    <Link to='/post' className='card__link'>
+    <Link to={`/post/${id}/${user}`} className='card__link'>
       <div className="card__container">
         <img src={photo || imgDefault} alt="post" />
         <form action="">

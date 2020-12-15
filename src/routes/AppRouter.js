@@ -30,7 +30,7 @@ export default function AppRouter() {
           <Route path="/new-post">
             <NewPostScreen />
           </Route>
-          <Route path="/post">
+          <Route path="/post/:id/:user">
             <DetailScreen />
           </Route>
           <Route path="/">
