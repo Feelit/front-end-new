@@ -1,11 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
+import { startLogin } from '../actions/actions';
 import { AuthLogo } from '../components/AuthLogo';
 import { useForm } from '../hooks/useForm';
 
 
 
 export const LoginScreen = () => {
+
+  const history = useHistory();
+  const dispatch = useDispatch()
 
   const [formLoginValues, handleLoginInputChange] = useForm({
     email: '',
@@ -18,8 +23,8 @@ export const LoginScreen = () => {
     e.preventDefault();
 
     console.log(email, password);
-    //dispatch(startLogin(email, password));
-    //history.replace('/');
+    dispatch(startLogin(email, password));
+    history.replace('/');
   };
 
 

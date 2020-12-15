@@ -13,15 +13,17 @@ export const NewPostScreen = () => {
   const [formNewPostValues, handleNewPostInputChange] = useForm({
     title: '',
     description: '',
+    photo:'',
   });
 
-  const { title, description } = formNewPostValues;
+  const { title, description, photo } = formNewPostValues;
 
   const handleNewPost = (e) => {
     e.preventDefault();
 
-    dispatch(startNewPost(title, 'juandaniel'));
-    history.replace('/');
+    console.log(title, description, photo);
+  dispatch(startNewPost(title, 'juandaniel', photo[0]));
+  history.replace('/');
   };
 
   const handlePictureClick = () => {
@@ -29,27 +31,26 @@ export const NewPostScreen = () => {
   }
 
   const handleFileChange = (e) => {
-    const file = e.target.files[0]
-    if (file){
-      console.log(file)
-    }
+    const photo = e.target.files[0]
+    return photo;
   }
 
   return (
     <section className='new-post__container'>
       <div className='new-post__container--left'>
       <p>Add Your Image</p>
-        <input
-          className='new-post__input-file'
-          id='fileSelector'
-          name='file'
-          type='file'
-          onChange={handleFileChange}/>
         <div
           onClick={handlePictureClick}
           className='new-post__btn-plus'>
           <img src={plusIcon} alt="add"/>
         </div>
+        <input
+          className='new-post__input-file'
+          id='fileSelector'
+          name='photo'
+          type='file'
+          onChange={handleFileChange}
+          />
       </div>
 
       <div className='new-post__container--right'>

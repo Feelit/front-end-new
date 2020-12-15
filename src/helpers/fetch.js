@@ -9,12 +9,12 @@ const getAllPosts = async () => {
 
 const fetchWithToken = (endpoint, data, method = "GET") => {
   const url = `${baseUrl}/${endpoint}`;
-  //const userData = JSON.parse(localStorage.getItem("userData")) || "";
+  const userToken = JSON.parse(localStorage.getItem("userToken")) || "";
   if (method === "GET") {
     return fetch(url, {
       method,
       headers: {
-        Authorization: `Token ab2fef055c08a442eb4d97d2976aaf9f767bfcac`,
+        Authorization: `Token ${userToken}`,
       },
     });
   } else {
@@ -22,7 +22,22 @@ const fetchWithToken = (endpoint, data, method = "GET") => {
       method,
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Token ab2fef055c08a442eb4d97d2976aaf9f767bfcac`,
+        Authorization: `Token ${userToken}`,
+      },
+      body: JSON.stringify(data),
+    });
+  }
+};
+
+const fetchWithoutToken = (endpoint, data, method = "GET") => {
+  const url = `${baseUrl}/${endpoint}`;
+  if (method === "GET") {
+    return fetch(url);
+  } else {
+    return fetch(url, {
+      method,
+      headers: {
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     });
@@ -33,5 +48,6 @@ const fetchWithToken = (endpoint, data, method = "GET") => {
 
 export {
   getAllPosts,
-  fetchWithToken
+  fetchWithToken,
+  fetchWithoutToken
 }
