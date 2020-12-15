@@ -24,6 +24,7 @@ export const startNewPost = (title, username) => {
       { title },
       "POST"
     );
+    return resp;
     //const body = await resp.json();
   };
 };
